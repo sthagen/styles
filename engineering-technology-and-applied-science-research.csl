@@ -1,46 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
   <info>
-    <title>IEEE</title>
-    <id>http://www.zotero.org/styles/ieee</id>
-    <link href="http://www.zotero.org/styles/ieee" rel="self"/>
-    <link href="https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf" rel="documentation"/>
-    <link href="https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/" rel="documentation"/>
+    <title>Engineering, Technology &amp; Applied Science Research</title>
+    <title-short>ETASR</title-short>
+    <id>http://www.zotero.org/styles/engineering-technology-and-applied-science-research</id>
+    <link href="http://www.zotero.org/styles/engineering-technology-and-applied-science-research" rel="self"/>
+    <link href="http://www.zotero.org/styles/ieee" rel="template"/>
+    <link href="http://etasr.com/ETASRTEMPLATE.docx" rel="documentation"/>
     <author>
-      <name>Michael Berkowitz</name>
-      <email>mberkowi@gmu.edu</email>
+      <name>Dr D. Pylarinos</name>
+      <email>editor@etasr.com</email>
     </author>
-    <contributor>
-      <name>Julian Onions</name>
-      <email>julian.onions@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Rintze Zelle</name>
-      <uri>http://twitter.com/rintzezelle</uri>
-    </contributor>
-    <contributor>
-      <name>Stephen Frank</name>
-      <uri>http://www.zotero.org/sfrank</uri>
-    </contributor>
-    <contributor>
-      <name>Sebastian Karcher</name>
-    </contributor>
-    <contributor>
-      <name>Giuseppe Silano</name>
-      <email>g.silano89@gmail.com</email>
-      <uri>http://giuseppesilano.net</uri>
-    </contributor>
-    <contributor>
-      <name>Patrick O'Brien</name>
-    </contributor>
-    <contributor>
-      <name>Brenton M. Wiernik</name>
-    </contributor>
     <category citation-format="numeric"/>
     <category field="engineering"/>
-    <category field="generic-base"/>
-    <summary>IEEE style as per the 2018 guidelines, V 11.12.2018.</summary>
-    <updated>2019-12-20T09:14:19+00:00</updated>
+    <issn>2241-4487</issn>
+    <eissn>1792-8036</eissn>
+    <summary>ETASR style largely based on IEEE 2018 guidelines, V 11.12.2018 without the use of abbreviations for containers.</summary>
+    <updated>2020-06-05T21:02:10+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -168,7 +144,7 @@
       <if type="paper-conference speech" match="any">
         <choose>
           <!-- Published Conference Paper -->
-          <if variable="collection-editor editor editorial-director issue page volume" match="any">
+          <if variable="container-title">
             <group delimiter=", ">
               <group delimiter=" ">
                 <text term="in"/>
@@ -233,21 +209,10 @@
     </choose>
   </macro>
   <macro name="page">
-    <choose>
-      <if type="article-journal" variable="number" match="all">
-        <group delimiter=" ">
-          <text value="Art."/>
-          <text term="issue" form="short"/>
-          <text variable="number"/>
-        </group>
-      </if>
-      <else>
-        <group delimiter=" ">
-          <label variable="page" form="short"/>
-          <text variable="page"/>
-        </group>
-      </else>
-    </choose>
+    <group>
+      <label variable="page" form="short" suffix=" "/>
+      <text variable="page"/>
+    </group>
   </macro>
   <macro name="citation-locator">
     <group delimiter=" ">
@@ -287,7 +252,7 @@
         <if type="article-journal">
           <group delimiter=", ">
             <text macro="title"/>
-            <text variable="container-title" font-style="italic" form="short"/>
+            <text variable="container-title" font-style="italic"/>
             <text macro="locators"/>
             <text macro="page"/>
             <text macro="issued"/>
