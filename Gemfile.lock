@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/citation-style-language/Sheldon.git
-  revision: 0d607983e872e9344c64914277fd7409ac0e29d3
+  revision: 38b6de75ac4dd86d6b3b47c172431e6e44f53ca0
   specs:
     sheldon (1.0.30)
       citeproc-ruby
@@ -20,7 +20,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     citeproc (1.0.10)
       namae (~> 1.0)
@@ -47,10 +47,10 @@ GEM
       ruby-progressbar (~> 1.4)
     git_diff (0.4.3)
     hashdiff (0.3.7)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.1)
     multipart-post (2.1.1)
     namae (1.0.2)
-    nokogiri (1.11.1)
+    nokogiri (1.11.4)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     octokit (4.20.0)
@@ -93,7 +93,7 @@ DEPENDENCIES
   sheldon!
 
 RUBY VERSION
-   ruby 2.7.1
+   ruby 3.0.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
